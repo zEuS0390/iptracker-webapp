@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,19 +14,6 @@
             background-color: transparent;
             width: 600px;
         }
-        .bottomright {
-            position: absolute;
-            bottom: 8px;
-            right: 16px;
-            font-size: 18px;
-        }
-        a:link {
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-            font-size:20px;
-            font-family:Verdana;
-        }
         .square {
             position: center;
             height: 800px;
@@ -33,9 +21,11 @@
             background-color: rgb(255, 255, 255);
         }
     </style>
-        <body background="backgroup.jpg">
-            <h1>IP INFORMATION RESULT</h1>
-            <center><div class="square"></div></center>
-            <div class="bottomright"><a href="{% url 'ip_api:index' %}">Go back to Home Page</a></div>
+        <body background="{% static 'img/background.jpg'%}">
+            <center>
+                <h1>IP INFORMATION RESULT</h1>
+                <div class="square"></div>
+            </center>
+            
         </body>
 </html>

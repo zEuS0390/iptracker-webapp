@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,33 +21,24 @@
                 top: 50%;
                 left: 50%;
             }
-            .search {
+            /* .search {
                 position: absolute;
                 background-color: transparent;
                 width: 600px;
                 bottom: 8px;
                 right: 16px;
                 font-size: 18px;
-            }   
-            
-            a:link {
-                color: white;
-                background-color: transparent;
-                text-decoration: none;
-                font-size:20px;
-                font-family:Verdana;
-            }
+            }    */
             </style>
 
-    <body background="background.jpg">
+    <body background="{% static 'img/background.jpg'%}">
         
-        <center>
-            <h1>IP Tracker Locator</h1>
-            <div class="square">
-            </div>
-            <br>
-            <br>
-            <a href="{% url 'ip_api:result' %};">Go to result page</a>
-        </center>
+            <center>
+                <h1>IP Tracker Locator</h1>
+                <div class="square">
+                </div>
+            </center>
+            
+   
     </body>
 </html>
