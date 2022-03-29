@@ -2,19 +2,39 @@
 <html>
     <head>
         <title>IP Tracker Webpage</title>
+        <style>
+            .square {
+                position: center;
+                height: 500px;
+                width: 600px;
+                background-color: rgb(255, 255, 255);
+                top: 50%;
+                left: 50%;
+            }
+            
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+                font-size:20px;
+                font-family:Verdana;
+            }
+
+            </style>
     </head> 
     <body background="background.jpg">
+        
         <center>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
 
             <h1 style="background-color:white;">IP Tracker Locator</h1>
-            <a href="{% url 'ip_api:result' %}">Go to result page</a>
+            
+            <div class="square">
+            </div>
+            <br>
+            <br>
+            <a href="{% url 'ip_api:result' %};">Go to result page</a>
         </center>
         
     </body>
