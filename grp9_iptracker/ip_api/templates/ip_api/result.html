@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>IP Tracker Result Webpage</title>
+        <title>IP Tracker Result Page</title>
     </head>
-    <body>
-        <h1>I'm in the result page</h1>
-        <a href="{% url 'ip_api:index' %}">Go back to index</a>
-    </body>
+    <style>
+        h1 {
+            font-size:30px;
+            font-family:Verdana;
+            color:rgb(255, 255, 255);
+            text-align:center;
+            border: 2px solid rgb(255, 255, 255);
+            background-color: transparent;
+        }
+        .bottomright {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+            font-size: 18px;
+        }
+        a:link {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+            font-size:20px;
+            font-family:Verdana;
+        }
+        .square {
+            position: center;
+            height: 800px;
+            width: 600px;
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+        <body background="backgroup.jpg">
+            <h1>IP INFORMATION RESULT</h1>
+            <center><div class="square"></div></center>
+            <div class="bottomright"><a href="{% url 'ip_api:index' %}">Go back to Home Page</a></div>
+        </body>
 </html>
