@@ -1,10 +1,44 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>IP Tracker Webpage</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-        <a href="{% url 'ip_api:result' %}">Go to result page</a>
+        <style>
+            h1 {
+                font-size:30px;
+                font-family:Verdana;
+                color:rgb(255, 255, 255);
+                text-align:center;
+                border: 2px solid rgb(255, 255, 255);
+                background-color: transparent;
+                width: 600px;
+            }
+            .square {
+                position: center;
+                height: 500px;
+                width: 600px;
+                background-color: rgb(255, 255, 255);
+                top: 50%;
+                left: 50%;
+            }
+            .content {
+                max-width: 500px;
+                margin: auto;
+            }
+            </style>
+
+    <body background="{% static 'img/background.jpg'%}">
+            <center>
+                <h1>IP Tracker Locator</h1>
+                <div class="square">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <label for="ip_address">IP Address: </label>
+                        <input type="text" id="ip_address" name="ip_address" placeholder="e.g 172.217.22.14">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </center>
+            
     </body>
 </html>
