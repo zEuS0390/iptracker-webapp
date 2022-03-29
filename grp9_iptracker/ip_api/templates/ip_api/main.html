@@ -21,24 +21,24 @@
                 top: 50%;
                 left: 50%;
             }
-            /* .search {
-                position: absolute;
-                background-color: transparent;
-                width: 600px;
-                bottom: 8px;
-                right: 16px;
-                font-size: 18px;
-            }    */
+            .content {
+                max-width: 500px;
+                margin: auto;
+            }
             </style>
 
     <body background="{% static 'img/background.jpg'%}">
-        
             <center>
                 <h1>IP Tracker Locator</h1>
                 <div class="square">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <label for="ip_address">IP Address: </label>
+                        <input type="text" id="ip_address" name="ip_address" placeholder="e.g 172.217.22.14">
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
             </center>
             
-   
     </body>
 </html>
