@@ -1,6 +1,4 @@
 from urllib.parse import urljoin
-from abc import ABC, abstractmethod
-from decouple import config
 import requests
 
 field = {
@@ -77,7 +75,7 @@ class ClientIP(IPAPI):
         return data
 
 def getIPInfo(ip_address):
-    base_url = "https://ipapi.co/"
-    url = urljoin(base_url, "{}/json".format(ip_address))
+    base_url = "http://ip-api.com"
+    url = urljoin(base_url, "json/{}".format(ip_address))
     data = requests.get(url).json()
     return data
