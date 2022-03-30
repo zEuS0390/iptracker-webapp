@@ -18,13 +18,13 @@ field = {
     "postal": "postal_code",
     "latitude" :"latitude",
     "longitude" :"longitude",
-    "timezone": "timezone", # format area/location
+    "timezone": "timezone",
     "utc_offset":"UTC_time",
     "country_calling_code":"calling_code",
     "currency": "currency_code",
     "currency_name": "currency_name",
     "languages":"language",
-    "country_area": "area_country", #in sq km
+    "country_area": "area_country",
     "counrty_population": "number_population",
     "asn": "autonomous_system_number",
     "org" : "organization_name",

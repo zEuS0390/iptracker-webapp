@@ -1,8 +1,6 @@
-from django.http import HttpResponseRedirect
-from django.urls import reverse
 from django.views import View
-from django.shortcuts import redirect, render
-from .api import getIPInfo
+from django.shortcuts import render
+from .api import *
 
 # Create your views here.
 
@@ -13,5 +11,6 @@ class Index(View):
 
     def post(self, request):
         ip_address = request.POST.get("ip_address")
-        data = getIPInfo(ip_address)
+        specificIP = SpecificIP()
+        data = specificIP.completeLocation(ip_address)
         return render(request, template_name="ip_api/result.html", context={"data": data})
