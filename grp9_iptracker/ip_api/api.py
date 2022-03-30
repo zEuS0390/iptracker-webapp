@@ -1,4 +1,6 @@
+from abc import ABC, abstractmethod
 from urllib.parse import urljoin
+from decouple import config
 import requests
 
 field = {
