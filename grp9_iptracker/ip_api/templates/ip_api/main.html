@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>IP Tracker Webpage</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-        <form method="POST">
-            {% csrf_token %}
-            <label for="ip_address">IP Address: </label>
-            <input type="text" id="ip_address" name="ip_address">
-            <button type="submit">Submit</button>
+{% extends 'ip_api/base.html' %} {% block content %}
+<div class="container">
+  <div class="row align-items-center" style="height: 100vh">
+    <div class="col d-flex justify-content-center">
+      <div class="square-box">
+        <h1 id="header-title">IP Tracker Locator</h1>
+        <form class="form-group" method="POST">
+          {% csrf_token %}
+          <label class="m-2 form-label" for="ipaddress">IP Address: </label>
+          <input
+            class="form-control"
+            type="text"
+            id="ipaddress"
+            name="ip_address"
+            placeholder="e.g 172.217.22.14"
+          />
+          <div class="d-grid mt-2">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
         </form>
-    </body>
-</html>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
