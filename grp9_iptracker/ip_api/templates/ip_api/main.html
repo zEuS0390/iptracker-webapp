@@ -1,44 +1,25 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>IP Tracker Webpage</title>
-        <style>
-            h1 {
-                font-size:30px;
-                font-family:Verdana;
-                color:rgb(255, 255, 255);
-                text-align:center;
-                border: 2px solid rgb(255, 255, 255);
-                background-color: transparent;
-                width: 600px;
-            }
-            .square {
-                position: center;
-                height: 500px;
-                width: 600px;
-                background-color: rgb(255, 255, 255);
-                top: 50%;
-                left: 50%;
-            }
-            .content {
-                max-width: 500px;
-                margin: auto;
-            }
-            </style>
-
-    <body background="{% static 'img/background.jpg'%}">
-            <center>
-                <h1>IP Tracker Locator</h1>
-                <div class="square">
-                    <form method="POST">
-                        {% csrf_token %}
-                        <label for="ip_address">IP Address: </label>
-                        <input type="text" id="ip_address" name="ip_address" placeholder="e.g 172.217.22.14">
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-            </center>
-            
-    </body>
-</html>
+{% extends 'ip_api/base.html' %} {% block content %}
+<div class="container">
+  <div class="row align-items-center" style="height: 100vh">
+    <div class="col d-flex justify-content-center">
+      <div class="square-box">
+        <h1 id="header-title">IP Tracker Locator</h1>
+        <form class="form-group" method="POST">
+          {% csrf_token %}
+          <label class="m-2 form-label" for="ipaddress">IP Address: </label>
+          <input
+            class="form-control"
+            type="text"
+            id="ipaddress"
+            name="ip_address"
+            placeholder="e.g 172.217.22.14"
+          />
+          <div class="d-grid mt-2">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
