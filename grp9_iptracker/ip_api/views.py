@@ -12,5 +12,8 @@ class Index(View):
     def post(self, request):
         ip_address = request.POST.get("ip_address")
         specificIP = SpecificIP()
-        data = specificIP.completeLocation(ip_address)
-        return render(request, template_name="ip_api/result.html", context={"data": data})
+        response = specificIP.completeLocation(ip_address)
+        if response[1] != 200:
+            response = getIPInfo(ip_address)
+        # data = {"City": "San Jose del Monte", "Province":"Bulacan", "Country": "Philippines"}
+        return render(request, template_name="ip_api/result.html", context={"data": response[0], "status_code": response[1]})
