@@ -15,5 +15,13 @@ class Index(View):
         response = specificIP.completeLocation(ip_address)
         if response[1] != 200:
             response = getIPInfo(ip_address)
-        # data = {"City": "San Jose del Monte", "Province":"Bulacan", "Country": "Philippines"}
         return render(request, template_name="ip_api/result.html", context={"data": response[0], "status_code": response[1]})
+
+def about(request):
+    member = [
+        "Aras, Juanito",
+        "Baltazar, Zeus James",
+        "Crebello, Cynna Mae",
+        "Moreno, Wenzel"
+    ]
+    return render(request, template_name="ip_api/about.html", context={"member":member})

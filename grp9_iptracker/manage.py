@@ -3,6 +3,28 @@
 import os
 import sys
 
+"""
+### Team Members:
+- Aras, Juanito
+- Baltazar, Zeus James
+- Crebello, Cynna Mae
+- Moreno, Wenzel
+
+### Major Requirements:
+- Git (Local Version Control)
+- GitHub (Remote Version Control)
+- Python (Programming Language)
+- Pipenv (Packaging Tool with Virtual Environment)
+- Django (Python Web Framework)
+- HTML/CSS/JS (Web Page Fundamentals)
+- Bootstrap (CSS Framework)
+
+### Honor Pledge
+~ "We affirm that we will not give or receive 
+~ any unauthorized help on this activity, and 
+~ that all work will be our own. We will never 
+~ give this material to anyone without our consent."
+"""
 
 def main():
     """Run administrative tasks."""

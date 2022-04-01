@@ -17,7 +17,6 @@ class SpecificIP(IPAPI):
         GET `https://ipapi.co/{ip}/json/`
         """
         url = urljoin(config("base_url"), f"/{ip}/json/")
-        print(config("base_url"), url)
         response = requests.get(url)
         return response.json(), response.status_code
 
