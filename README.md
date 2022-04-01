@@ -1,3 +1,12 @@
+<div class="badges">
+  <a href="#">
+    <img src="https://img.shields.io/badge/Team-Jurubetsu-orange" alt="Team-Jurubetsu">
+  </a>
+  <a href="https://tip.edu.ph/">
+    <img src="https://img.shields.io/badge/TIP-Quezon%20City-yellow" alt="TIP-QC">
+  </a>
+</div>
+  
 # Team Jurubetsu - Group 9 - IP Tracker
 
 ### Team Members:
