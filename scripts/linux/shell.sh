@@ -1,2 +1,2 @@
 cd ../..
-pipenv shell
+python3 -m pipenv shell

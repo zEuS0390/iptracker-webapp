@@ -1,2 +1,2 @@
 cd ../..
-pipenv install
+python3 -m pipenv install
