@@ -8,6 +8,7 @@
 </div>
   
 # Team Jurubetsu - Group 9 - IP Tracker
+The IP Tracker is a user-friendly and efficient web-based application that allows you to find the geographical location and various information associated with any given IP address. Whether you want to understand the origin of a website visitor, troubleshoot network issues, or enhance your cybersecurity measures, this tool provides a quick and accurate solution.
 
 ### Team Members:
 - Aras, Juanito
